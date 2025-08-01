@@ -1,3 +1,11 @@
-import { start } from "@ghini/start/dev";
+import { userinfo } from "@ghini/faker/dev";
 
-start();
+let res;
+res = userinfo("RU");
+console.log(res);
+res = userinfo("us");
+console.log(res);
+res = userinfo("jp");
+console.log(res);
+res = userinfo("cn");
+console.log(res);

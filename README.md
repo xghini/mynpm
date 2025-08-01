@@ -10,7 +10,7 @@
 ## 记得改包名
 ```
 git init
-git branch -M new_branch
+git branch -M faker
 git remote add origin https://github.com/xghini/mynpm.git
-git push -u origin new_branch
+git push -u origin faker
 ```

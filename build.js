@@ -1,16 +1,9 @@
-// build.js - 一个完整的构建脚本，无需外部依赖
-
-// 1. 导入 Node.js 内置模块
+// build.js
 import fs from 'fs';
 import path from 'path';
-
-// --- 配置 ---
 const devDir = './dev';
 const distDir = './dist';
 const packageJsonPath = './package.json';
-
-// --- 辅助函数 ---
-
 /**
  * 递归地复制一个目录及其所有内容。
  * @param {string} src 源目录路径。
@@ -22,10 +15,8 @@ function copyDirRecursive(src, dest) {
     console.error(`错误：源目录 "${src}" 不存在。`);
     throw new Error(`源目录 ${src} 未找到。`);
   }
-
   const stats = fs.statSync(src);
   const isDirectory = stats.isDirectory();
-
   if (isDirectory) {
     // 如果是目录，创建目标目录
     fs.mkdirSync(dest, { recursive: true });
@@ -60,7 +51,6 @@ function generateVersionFromDate() {
 
 
 // --- 主要构建流程 ---
-
 try {
   console.log('🚀 开始执行构建流程...');
 
