@@ -10,4 +10,7 @@
 ## 记得改包名
 ```
 git init
+git branch -M new_branch
+git remote add origin https://github.com/xghini/mynpm.git
+git push -u origin new_branch
 ```
