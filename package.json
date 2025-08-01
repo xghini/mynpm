@@ -1,6 +1,6 @@
 {
   "name": "@ghini/faker",
-  "version": "25.8.1185230",
+  "version": "25.8.1190409",
   "scripts": {
     "build": "node ./build.js",
     "pub": "npm run build && npm publish && git add . && git commit -m 'update' && git push"

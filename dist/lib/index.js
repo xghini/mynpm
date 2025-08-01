@@ -272,7 +272,7 @@ function generateRealLocationData(fakerInstance, countryCode) {
  * @param {string} code - 国家缩写（如：CN, JP, KR, US, RU等）
  * @returns {Object|null} 用户资料对象或null
  */
-function userinfo(code) {
+function userinfo(code='US') {
   if (!code || typeof code !== 'string') {
     console.error("错误：请输入一个有效的国家缩写字符串。");
     return null;
