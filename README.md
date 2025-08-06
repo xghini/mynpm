@@ -7,7 +7,7 @@
 
 ## build.js用来修改version和打包
 
-## 记得改包名
+## 全屏替换xstart为新库名
 ```
 git init
 git branch -M new_branch

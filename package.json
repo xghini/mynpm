@@ -1,6 +1,6 @@
 {
-  "name": "@ghini/start",
-  "version": "25.8.1190605",
+  "name": "@ghini/xstart",
+  "version": "25.8.6124323",
   "scripts": {
     "build": "node ./build.js",
     "pub": "npm run build && npm publish && git add . && git commit -m 'update' && git push"

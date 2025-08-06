@@ -1,6 +1,6 @@
 import * as index from "./lib/index.js";
-const kit = {
+const xstart = {
   ...index,
 };
-export default kit;
+export default xstart;
 export * from "./lib/index.js";
