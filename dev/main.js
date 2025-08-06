@@ -1,6 +1,6 @@
 import * as index from "./lib/index.js";
-const kit = {
+const faker = {
   ...index,
 };
-export default kit;
+export default faker;
 export * from "./lib/index.js";
