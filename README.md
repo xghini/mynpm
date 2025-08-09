@@ -9,8 +9,9 @@
 
 ## 全屏替换xstart为新库名
 ```
+Remove-Item -Recurse -Force .git
 git init
-git branch -M new_branch
+git branch -M xstart
 git remote add origin https://github.com/xghini/mynpm.git
-git push -u origin new_branch
+git push -u origin xstart
 ```
