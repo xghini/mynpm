@@ -14,4 +14,5 @@ git init
 git branch -M xstart
 git remote add origin https://github.com/xghini/mynpm.git
 git push -u origin xstart
+npm run pub
 ```
