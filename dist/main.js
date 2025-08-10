@@ -1,6 +1,5 @@
 import * as index from "./lib/index.js";
-const xstart = {
+export default {
   ...index,
-};
-export default xstart;
+}
 export * from "./lib/index.js";

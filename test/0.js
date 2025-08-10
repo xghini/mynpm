@@ -1,3 +1,3 @@
-import { start } from "@ghini/start/dev";
+import { start } from "@ghini/xstart/dev";
 
 start();

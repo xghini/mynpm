@@ -1,3 +1,1 @@
-export function start(){
-  console.log('Hello Ghini')
-}
+export * from "./start.js";
