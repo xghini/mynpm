@@ -1,9 +1,10 @@
 {
   "name": "@ghini/bctl",
-  "version": "25.8.9172612",
+  "version": "25.8.23021939",
   "scripts": {
     "build": "node ./build.js",
-    "pub": "npm run build && npm publish && git add . && git commit -m 'update' && git push"
+    "pub": "npm run build && npm publish && git add . && git commit -m 'update' && git push",
+    "update": "npm cache clean --force&&npm update"
   },
   "exports": {
     ".": {
@@ -20,5 +21,11 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@ghini/kit": "^25.8.9170100",
+    "country-state-city": "^3.2.1",
+    "puppeteer-core": "^24.16.0"
   }
 }

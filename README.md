@@ -11,7 +11,10 @@
 ```
 Remove-Item -Recurse -Force .git
 git init
+git add .
+git commit -m "Initial commit"
 git branch -M bctl
 git remote add origin https://github.com/xghini/mynpm.git
 git push -u origin bctl
+npm run pub
 ```

@@ -1,6 +1,8 @@
 import * as index from "./lib/index.js";
-const bctl = {
+import * as ppt from "./lib/puppeteer/puppeteer.js";
+export default {
   ...index,
-};
-export default bctl;
+  ...ppt,
+}
 export * from "./lib/index.js";
+export * from "./lib/puppeteer/puppeteer.js";
