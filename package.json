@@ -1,9 +1,10 @@
 {
   "name": "@ghini/xstart",
-  "version": "25.8.10143454",
+  "version": "25.8.24084529",
   "scripts": {
     "build": "node ./build.js",
-    "pub": "npm run build && npm publish && git add . && git commit -m 'update' && git push"
+    "pub": "npm run build && npm publish && git add . && git commit -m 'update' && git push",
+    "update": "npm cache clean --force&&npm update"
   },
   "exports": {
     ".": {
