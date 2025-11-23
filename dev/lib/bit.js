@@ -174,26 +174,29 @@ async function create(options = {}) {
  */
 function createByProxy(baseProxyString, baseConfig = {}) {
   // 1. 解析初始代理字符串，提取模板和计数器
-  const parts = baseProxyString.split(':');
+  const parts = baseProxyString.split(":");
   if (parts.length !== 4) {
     console.error("代理字符串格式无效，应为 'host:port:username:password'");
     return null;
   }
 
   const [host, port, username, password] = parts;
-  const lastUnderscoreIndex = username.lastIndexOf('_');
-  
+  const lastUnderscoreIndex = username.lastIndexOf("_");
+
   if (lastUnderscoreIndex === -1) {
     console.error("代理用户名格式无效，找不到用于递增的 '_XXXX' 部分");
     return null;
   }
-  
+
   const usernameBase = username.substring(0, lastUnderscoreIndex + 1); // e.g., "customer-...-sessid-1755831767_"
-  let currentCounter = parseInt(username.substring(lastUnderscoreIndex + 1), 10);
-  
+  let currentCounter = parseInt(
+    username.substring(lastUnderscoreIndex + 1),
+    10
+  );
+
   if (isNaN(currentCounter)) {
-      console.error("代理用户名中的 Session ID 不是一个有效的数字");
-      return null;
+    console.error("代理用户名中的 Session ID 不是一个有效的数字");
+    return null;
   }
 
   /**
@@ -212,8 +215,8 @@ function createByProxy(baseProxyString, baseConfig = {}) {
     const finalConfig = {
       // 基础配置 (来自工厂函数)
       proxyMethod: 2, // 强制为自定义代理
-      proxyType: 'http', // 默认为 http，因为这类代理很常见
-      ...baseConfig,   // 用户传入的固定配置 (如 groupId)
+      proxyType: "http", // 默认为 http，因为这类代理很常见
+      ...baseConfig, // 用户传入的固定配置 (如 groupId)
 
       // 根据本次调用动态生成的代理信息
       host,

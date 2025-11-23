@@ -1,6 +1,6 @@
 {
   "name": "@ghini/bctl",
-  "version": "25.8.23021939",
+  "version": "25.11.24060719",
   "scripts": {
     "build": "node ./build.js",
     "pub": "npm run build && npm publish && git add . && git commit -m 'update' && git push",
@@ -23,9 +23,14 @@
     "access": "public"
   },
   "dependencies": {
+    "@aws-sdk/client-iam": "^3.873.0",
+    "@aws-sdk/client-lightsail": "^3.873.0",
+    "@aws-sdk/client-service-quotas": "^3.873.0",
     "@faker-js/faker": "^9.9.0",
     "@ghini/kit": "^25.8.9170100",
     "country-state-city": "^3.2.1",
-    "puppeteer-core": "^24.16.0"
+    "ping": "^0.4.4",
+    "puppeteer-core": "^24.16.0",
+    "tesseract.js": "^6.0.1"
   }
 }
