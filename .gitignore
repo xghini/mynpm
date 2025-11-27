@@ -1,0 +1,8 @@
+**/.env
+**/conf.js
+**/*.conf.js
+**/*.yaml
+**/*.yml
+
+node_modules
+private

@@ -1,0 +1,25 @@
+{
+  "name": "@ghini/xstart",
+  "version": "25.8.26032431",
+  "scripts": {
+    "build": "node ./build.js",
+    "pub": "npm run build && npm publish && git add . && git commit -m 'update' && git push",
+    "update": "npm cache clean --force&&npm update"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/main.js",
+      "types": "./dist/main.d.ts"
+    },
+    "./dev": {
+      "import": "./dev/main.js",
+      "types": "./dev/main.d.ts"
+    }
+  },
+  "type": "module",
+  "author": "Ghini",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
