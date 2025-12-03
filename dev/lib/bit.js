@@ -89,7 +89,7 @@ async function delgroup(groupName) {
       console.warn(
         `警告：找不到名为 "${groupName}" 的分组，或该分组下无任何窗口。`
       );
-      return;
+      return 0;
     }
     const idsToDelete = profilesInGroup.map((p) => p.id);
     const result = await del(idsToDelete);
