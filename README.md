@@ -9,7 +9,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M xstart
-git remote add origin https://github.com/xghini/mynpm.git
+git remote add origin git@github.com:xghini/mynpm.git
 git push -u origin xstart
 npm run pub
 ```
