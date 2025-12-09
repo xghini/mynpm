@@ -1,1 +1,2 @@
-export * from "./start.js";
+export * from "../start.js";
+//# sourceMappingURL=index.js.map

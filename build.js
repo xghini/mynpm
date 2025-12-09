@@ -1,6 +1,8 @@
 // build.js
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
+const srcDir = './src';
 const devDir = './dev';
 const distDir = './dist';
 const packageJsonPath = './package.json';
@@ -54,17 +56,20 @@ function generateVersionFromDate() {
 try {
   console.log('🚀 开始执行构建流程...');
 
-  // 步骤 1: 清理旧的 'dist' 目录
+  // 步骤 1: 清理旧的 'dist' 和 'dev' 目录
   if (fs.existsSync(distDir)) {
     console.log(`[1/3] 正在删除旧目录: ${distDir}`);
-    // fs.rmSync 是一个现代且高效的递归删除目录的方法
     fs.rmSync(distDir, { recursive: true, force: true });
   }
+  if (fs.existsSync(devDir)) {
+    console.log(`[1/3] 正在删除旧目录: ${devDir}`);
+    fs.rmSync(devDir, { recursive: true, force: true });
+  }
 
-  // 步骤 2: 将 'dev' 目录复制为 'dist'
-  console.log(`[2/3] 正在复制 "${devDir}" 到 "${distDir}"...`);
-  copyDirRecursive(devDir, distDir);
-  console.log('...目录复制完成。');
+  // 步骤 2: 运行 TypeScript 编译
+  console.log(`[2/3] 正在编译 TypeScript...`);
+  execSync('npx tsc', { stdio: 'inherit' });
+  console.log('...TypeScript 编译完成。');
 
   // 步骤 3: 更新 package.json 中的版本号
   console.log(`[3/3] 正在更新 ${packageJsonPath} 中的版本号...`);
