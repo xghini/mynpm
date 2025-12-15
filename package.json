@@ -22,8 +22,5 @@
   "devDependencies": {
     "@types/node": "^24.10.2",
     "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "@ghini/kit": "^25.12.12055105"
   }
 }
