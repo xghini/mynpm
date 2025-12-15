@@ -1,0 +1,29 @@
+{
+  "name": "ghini",
+  "version": "25.12.15090126",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "node ./build.js",
+    "pub": "npm run build && npm publish && git add . && git commit -m 'update' && git push",
+    "update": "npm cache clean --force&&npm update"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "type": "module",
+  "author": "Ghini",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@ghini/kit": "^25.12.12055105"
+  }
+}
