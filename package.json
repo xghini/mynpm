@@ -1,6 +1,6 @@
 {
-  "name": "@ghini/xstart",
-  "version": "25.12.10043118",
+  "name": "ghini",
+  "version": "25.12.15090126",
   "scripts": {
     "type-check": "tsc --noEmit",
     "build": "node ./build.js",
@@ -22,5 +22,8 @@
   "devDependencies": {
     "@types/node": "^24.10.2",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@ghini/kit": "^25.12.12055105"
   }
 }

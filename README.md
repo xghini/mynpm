@@ -21,14 +21,14 @@ npm run pub         # 构建 + 发布到 npm + 提交 git
 
 ## 📦 创建新库
 
-全文件替换 `xstart` 为新库名：
+全文件替换 `ghini` 为新库名：
 ```bash
 Remove-Item -Recurse -Force .git
 git init
 git add .
 git commit -m "Initial commit"
-git branch -M xstart
+git branch -M ghini
 git remote add origin git@github.com:xghini/mynpm.git
-git push -u origin xstart
+git push -u origin ghini
 npm run pub
 ```
