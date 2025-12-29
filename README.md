@@ -1,15 +1,15 @@
-# 一个标准 TypeScript 2025 的 npm 库脚手架
+# 一个标准 TypeScript 2026 的 npm 库脚手架
 
 ### 开发
 ```bash
-npx tsc --watch
-npm run type-check  # 类型检查（不生成文件）
-npm run build       # 编译 TypeScript + 打包 + 更新版本号
+pnpm tsc --watch
+pnpm type-check  # 类型检查（不生成文件）
+pnpm build       # 编译 TypeScript + 打包 + 更新版本号
 ```
 
 ### 发布
 ```bash
-npm run pub         # 构建 + 发布到 npm + 提交 git
+pnpm pub         # 构建 + 发布到 npm + 提交 git
 ```
 
 ## 🔧 TypeScript 配置亮点

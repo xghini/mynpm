@@ -1,11 +1,10 @@
 {
   "name": "@ghini/xstart",
-  "version": "25.12.29103740",
+  "version": "25.12.29104833",
   "scripts": {
     "type-check": "tsc --noEmit",
     "build": "node ./build.js",
-    "pub": "pnpm build && pnpm publish --no-git-checks && git add . && git commit -m 'update' && git push",
-    "update": "pnpm update"
+    "pub": "pnpm build && pnpm publish --no-git-checks && git add . && git commit -m 'update' && git push"
   },
   "exports": {
     ".": {

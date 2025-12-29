@@ -1,39 +1,9 @@
 // build.js
 import fs from 'fs';
-import path from 'path';
 import { execSync } from 'child_process';
-const srcDir = './src';
 const devDir = './dev';
 const distDir = './dist';
 const packageJsonPath = './package.json';
-/**
- * 递归地复制一个目录及其所有内容。
- * @param {string} src 源目录路径。
- * @param {string} dest 目标目录路径。
- */
-function copyDirRecursive(src, dest) {
-  const exists = fs.existsSync(src);
-  if (!exists) {
-    console.error(`错误：源目录 "${src}" 不存在。`);
-    throw new Error(`源目录 ${src} 未找到。`);
-  }
-  const stats = fs.statSync(src);
-  const isDirectory = stats.isDirectory();
-  if (isDirectory) {
-    // 如果是目录，创建目标目录
-    fs.mkdirSync(dest, { recursive: true });
-    // 读取源目录中的所有项，并对每一项进行递归调用
-    fs.readdirSync(src).forEach(childItemName => {
-      copyDirRecursive(
-        path.join(src, childItemName),
-        path.join(dest, childItemName)
-      );
-    });
-  } else {
-    // 如果是文件，直接复制
-    fs.copyFileSync(src, dest);
-  }
-}
 
 /**
  * 根据当前日期生成版本号。
