@@ -1,11 +1,11 @@
 {
   "name": "@ghini/xstart",
-  "version": "25.12.29102817",
+  "version": "25.12.29103740",
   "scripts": {
     "type-check": "tsc --noEmit",
     "build": "node ./build.js",
-    "pub": "npm run build && npm publish && git add . && git commit -m 'update' && git push",
-    "update": "npm cache clean --force&&npm update"
+    "pub": "pnpm build && pnpm publish --no-git-checks && git add . && git commit -m 'update' && git push",
+    "update": "pnpm update"
   },
   "exports": {
     ".": {
@@ -20,7 +20,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@types/node": "^24.10.2",
+    "@types/node": "^25.0.3",
     "typescript": "^5.9.3"
   }
 }
