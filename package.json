@@ -1,6 +1,6 @@
 {
   "name": "@ghini/xstart",
-  "version": "26.1.3131540",
+  "version": "26.1.3144738",
   "scripts": {
     "type-check": "tsc --noEmit",
     "build": "node ./build.js",
