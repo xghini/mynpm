@@ -5,7 +5,7 @@
 **/*.yml
 
 node_modules
-dist/
+# dist/
 dev/
 *.tsbuildinfo
 private
